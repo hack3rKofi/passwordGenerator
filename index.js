@@ -29,6 +29,16 @@ rangeInput.addEventListener('input', () => {
 //copy passInput's value on copyIcon click
 copyIcon.addEventListener('click', () => {
   navigator.clipboard.writeText(passwordInput.value);
+  Toastify({
+    text: `copied password to clipboard`,
+    style: {
+      background: 'linear-gradient(to right, #00b09b, #96c93d)',
+    },
+    offset: {
+      x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+      y: 10, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+    },
+  }).showToast();
   copyIcon.classList.replace('uil-copy', 'uil-file-check-alt'); //replace icon
 });
 
